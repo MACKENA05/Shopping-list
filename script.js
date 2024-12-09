@@ -2,7 +2,7 @@
 const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
 // Selecting DOM elements
 const itemInput = document.getElementById('itemInput');
-const addButton = document.getElementById('addbutton');
+const addButton = document.getElementById('addButton');
 const clearButton = document.getElementById('clearButton');
 const shoppingListContainer =document.getElementById('shoppingList');
 
@@ -11,7 +11,7 @@ const shoppingListContainer =document.getElementById('shoppingList');
 //function to generate shopping list
 function generateList(){
     shoppingListContainer.innerHTML = '';  //clear the list
-    shoppingList.foreach((item,index)=>{
+    shoppingList.forEach((item,index) =>{
         const li = document.createElement('li');
         li.classLis.toggle('purchased',item.purchased);                                          //Toggle 'purchased' class based on status
         //setting inner HTML
