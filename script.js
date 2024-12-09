@@ -17,8 +17,11 @@
 
                 // Set inner HTML with editable text and a checkbox for purchased status
                 li.innerHTML = `
-                    <input type="checkbox" class="checkbox" data-index="${index}" ${item.purchased ? 'checked' : ''}>
-                    <span contenteditable="true" class="item-text">${item.text}</span>`;
+                   <input type="checkbox" class="checkbox" data-index="${index}" ${item.purchased ? 'checked' : ''}>
+                     <span contenteditable="true" class="item-text">${item.text}</span>
+                     <button class="editButton" data-index="${index}">Edit</button>
+                     <button class="deleteButton" data-index="${index}">Delete</button>
+                    `;
 
                 shoppingListContainer.appendChild(li);  // Append <li> item to the <ul> container.
             });
@@ -45,6 +48,24 @@
                 generateList();  // Re-render the list to reflect the changes
             }
         });
+
+        // Event Listener for editing the item text
+       shoppingListContainer.addEventListener('blur', (event) => {
+          if (event.target.classList.contains('item-text')) {
+             const index = Array.from(shoppingListContainer.children).indexOf(event.target.parentElement);
+             shoppingList[index].text = event.target.innerText.trim();
+              generateList();
+        }
+        }, true);
+
+        // Event Listener to delete an item
+        shoppingListContainer.addEventListener('click', (event) => {
+          if (event.target.classList.contains('deleteBtn')) {
+          const index = event.target.dataset.index;
+          shoppingList.splice(index, 1);
+         generateList();
+      }
+    });
 
         // Event listener to clear all items
         clearButton.addEventListener('click', () => {
