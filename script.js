@@ -6,6 +6,8 @@ const addButton = document.getElementById('addbutton');
 const clearButton = document.getElementById('clearButton');
 const shoppingListContainer =document.getElementById('shoppingList');
 
+
+
 //function to generate shopping list
 function generateList(){
     shoppingListContainer.innerHTML = '';  //clear the list
@@ -22,4 +24,15 @@ function generateList(){
     //save to local storage
     localStorage.setItem('shoppingList',JSON,stringify(shoppingList));
 }
+
+
+//Event listeners to add items to the shopping list 
+addButton.addEventListener('click',() =>{
+    const itemText = itemInput.ariaValueMax.trim();                            //.trim removes any leading or trailling white space from the input to ensure clean input
+    if (itemText){
+        shoppingList.push({text:itemText,purchase:false});
+        itemInput.value ='';
+        generateList();                                                             // called to update the UI and display the new item.
+    }
+});
 
