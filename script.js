@@ -19,4 +19,7 @@ function generateList(){
         
       shoppingListContainer.appendChild(li);                                                           //append <li> item to the <ul> container.
     });
- 
+    //save to local storage
+    localStorage.setItem('shoppingList',JSON,stringify(shoppingList));
+}
+
