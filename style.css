@@ -84,17 +84,17 @@ body {
   .checkbox {
     margin-right: 10px;
   }
-  .deleteButton {
+  .deleteBtn {
     background-color: #ff4d4d;
     color: white;
     border: none;
     padding: 5px;
-    margin-left: 10px;
+    margin-left: 5px;
     cursor: pointer;
     border-radius: 5px;
-
+    margin-left: auto;
   }
-  .editButton{
+  .edit-btn{
     background-color: #45a049 ;
     color: white;
     border: none;
@@ -102,5 +102,7 @@ body {
     margin-left: 300px;
     cursor: pointer;
     border-radius: 5px;
+    margin-right: 10px;
+   
   }
   
