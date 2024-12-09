@@ -44,4 +44,12 @@ shoppingListContainer.addEventListener('change',(event) =>{
         generateList();
     };
 });
+//Event listeners to clear all items
+clearButton.addEventListener('click',()=> {
+    shoppingList.length = 0
+    generateList();
+});
+
+//Initial Generating of list
+generateList();
 
