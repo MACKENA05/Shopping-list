@@ -38,3 +38,23 @@ h1{
     border: none;
     border-radius: 5px;
 }
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    font-size: 18px;    
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.checkbox {
+    margin-right: 10px;
+  }
+  li.purchased {
+    text-decoration: line-through;
+    background-color: #d3ffd3;
+  }
