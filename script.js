@@ -36,3 +36,12 @@ addButton.addEventListener('click',() =>{
     }
 });
 
+//Event listeners to mark items as purchased
+shoppingListContainer.addEventListener('change',(event) =>{
+    if (event.target.classlist.contains('checkbox')){
+        const index = event.target.dataset.index;
+        shoppingList[index].purchased =event.target.checked;
+        generateList();
+    };
+});
+
