@@ -36,7 +36,7 @@ addButton.addEventListener('click', () => {
     if (itemText) {
         shoppingList.push({ text: itemText, purchased: false });  // Add new item to the list
         itemInput.value = '';  // Clear the input field
-        generateList();  // Call to update the UI with the new item
+        generateList();  
     }
 });
 
@@ -45,7 +45,7 @@ shoppingListContainer.addEventListener('change', (event) => {
     if (event.target.classList.contains('checkbox')) {
         const index = event.target.dataset.index;
         shoppingList[index].purchased = event.target.checked;  // Update the 'purchased' status
-        generateList();  // Re-render the list to reflect the changes
+        generateList();  
     }
 });
 
@@ -73,8 +73,6 @@ shoppingListContainer.addEventListener('click', (event) => {
             itemSpan.focus();  // Focus on the editable text
             event.target.innerText = 'Save';   // Change button text to 'Save'
         }
-
-        // No need to call generateList() here, as we are directly editing the element
     }
 });
 
@@ -83,9 +81,9 @@ shoppingListContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('deleteBtn')) {
         const index = event.target.dataset.index;
 
-        // Optional: Confirm delete
+        // Confirm delete
         if (confirm('Are you sure you want to delete this item?')) {
-            shoppingList.splice(index, 1);  // Remove item from the list
+            shoppingList.splice(index, 1);  
             generateList();  // Re-render the list
         }
     }
@@ -94,7 +92,7 @@ shoppingListContainer.addEventListener('click', (event) => {
 // Event listener to clear all items
 clearButton.addEventListener('click', () => {
     shoppingList.length = 0;  // Clear the shopping list array
-    generateList();  // Call to re-render the empty list
+    generateList();  
 });
 
 // Initial generating of the list when the page loads
