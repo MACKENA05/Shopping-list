@@ -2,10 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     padding: 20px;
-    justify-content: center;  /* Center horizontally */
+    justify-content: center;  
     align-items: center;
     background-color:grey;
-    /* background-image: url(./bluback.jpeg) ; */
   }
   
   .container {
@@ -14,13 +13,13 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px ;
     text-align: center;
   }
   .header img{
     width: 70px;
     height: 70px;
-    justify-content: center;  /* Center horizontally */
+    justify-content: center;  
     align-items: center;
     
   }
