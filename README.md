@@ -11,6 +11,7 @@ This is a simple and interactive shopping list web application. It allows users 
 4. [How it works](#how-it-works)
 5. [File structure](#file-structure)
 6. [License](#license)
+7. [Contact](#contact)
 
 ## Features
 - **Add Items**: Add new items to the shopping list.
@@ -60,8 +61,14 @@ cd shopping-list-app
   ├── index.html      # HTML file for the app
   ├── style.css       # Stylesheet for the UI
   ├── script.js       # JavaScript for app functionality
-  └── download.jpeg   # Image file for cart icon (used in header)
+  └── icon.jpeg       # Image file for cart icon (used in header)
 ```
 
 ## License
 This project is open source and available under the MIT License.
+
+## Contact
+If you have any questions or suggestions, feel free to reach out:
+
+- Email: mackenamuthui@gmail.com
+- Phone: +254703886506
