@@ -2,15 +2,15 @@
 This is a simple and interactive shopping list web application. It allows users to add, edit, delete, and mark items as purchased. The list is stored in the browser's localStorage, so the list persists even after the page is refreshed.
 
 ## Table of Contents
-1. Features
-2. Technologies Used
-3. Getting Started
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Getting Started](#getting-started)
     - Prerequisites
     - Installation
     - Usage
-4.How It Works
-5. File Structure
-6. License
+4. [How it works](#how-it-works)
+5. [File structure](#file-structure)
+6. [License](#license)
 
 ## Features
 - **Add Items**: Add new items to the shopping list.
